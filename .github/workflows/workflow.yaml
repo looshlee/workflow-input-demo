@@ -13,4 +13,4 @@ jobs:
   job1:
     uses: Melsoft-Games/workflow-input-demo/.github/workflows/build_job.yml@master
     with:
-      test_input1: ${{ github.event.inputs.test_input1 }}
+      test_input1: ${{ fromJSON(github.event.inputs.test_input1) }}

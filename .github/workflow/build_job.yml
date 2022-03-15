@@ -1,0 +1,17 @@
+name: build_job
+
+on:
+  workflow_call:
+      test_input1:
+        required: true
+        type: boolean
+        default: false
+
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: echo input value
+        run: echo ${{ inputs.test_input1 }}

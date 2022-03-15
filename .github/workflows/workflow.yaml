@@ -14,10 +14,3 @@ jobs:
     uses: Melsoft-Games/workflow-input-demo/.github/workflows/build_job.yml@master
     with:
       test_input1: ${{ fromJSON(github.event.inputs.test_input1) }}
-  build_job:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: echo input value
-        run: echo ${{ inputs.test_input1 }}
-      - name: echo type
-        run: echo typeof ${{ inputs.test_input1 }}

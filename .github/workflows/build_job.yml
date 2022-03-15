@@ -1,6 +1,7 @@
 name: build_job
 
 on:
+  workflow_dispatch: 
   workflow_call:
     inputs:
       test_input1:
@@ -16,3 +17,5 @@ jobs:
     steps:
       - name: echo input value
         run: echo ${{ inputs.test_input1 }}
+      - name: echo type
+        run: echo typeof ${{ inputs.test_input1 }}

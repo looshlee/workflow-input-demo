@@ -15,4 +15,4 @@ jobs:
     timeout-minutes: 180
     steps:
       - name: echo input value
-        run: echo ${{ inputs.test_input1 }}
+        run: echo ${{fromJSON(inputs.test_input1)}}
